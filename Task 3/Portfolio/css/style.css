@@ -1,0 +1,451 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: #2c3e50;
+    background: url("https://media.freestocktextures.com/cache/98/77/9877ce5c0ff678e95b26394b061e1d43.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.nav-menu {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1.8rem;
+    color: #3498db;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nav-menu:hover {
+    background-color: #3498db;
+    color: #fff;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.navbar-nav a {
+    color: rgba(44, 62, 80, 0.8);
+
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.navbar-nav a:hover {
+    color: #3498db;
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.navbar-nav a::after {
+    background: none;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: #3498db;
+    transition: width 0.4s ease, left 0.4s ease, transform 0.3s ease;
+    width: 0;
+    transform: scaleX(0);
+}
+.navbar-nav a:hover::after {
+    width: 100%;
+    left: 0;
+    transform: scaleX(1);
+}
+
+.home {
+    background: linear-gradient(135deg, rgba(236, 240, 241, 0.9) 0%, rgba(236, 240, 241, 0.9) 100%);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.home h2 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    color: #2c3e50;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+.c-orange {
+    color: #3498db;
+    font-weight: 700;
+    font-size: 4.5rem;
+}
+.home p {
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: rgba(44, 62, 80, 0.8);
+}
+.h-btn {
+    padding: 12px 24px;
+    border: none;
+    background: rgba(52, 152, 219, 0.8);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.h-btn:hover {
+    background: rgba(41, 128, 185, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #3498db;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.link:hover {
+    color: #2c3e50;
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.home img {
+    animation: floatimg 6s ease-in-out infinite, pulse 2s infinite;
+    border-radius: 1rem;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes floatimg {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.heading small {
+    color: #3498db;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.heading h3 {
+    margin-top: 0.5rem;
+    color: #2c3e50;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.expertise h4 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+.expertise a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.expertise a:hover {
+    color: #2c3e50;
+    transform: translateY(-2px) scale(1.05);
+}
+.expertise .service-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.expertise .service-card:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.skill {
+    background-color: rgba(236, 240, 241, 0.9);
+    padding: 60px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+.progress-card {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.progress-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.circular-progress {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: conic-gradient(rgba(52, 152, 219, 0.8) 0% 75%, rgba(236, 240, 241, 0.8) 75% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+.circular-progress:hover {
+    background: conic-gradient(rgba(52, 152, 219, 0.8) 0% 85%, rgba(236, 240, 241, 0.8) 85% 100%);
+}
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.progress-value {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.html-progress {
+    color: #3498db;
+}
+.javascript-progress {
+    color: #2c3e50;
+}
+.php-progress {
+    color: #2ecc71;
+}
+.reactjs-progress {
+    color: #61dbfb;
+}
+.text {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.heading p {
+    font-size: 1.4rem;
+}
+
+#myBtnContainer {
+    margin-bottom: 45px;
+    text-align: center;
+}
+#myBtnContainer button {
+    border: none;
+    color: rgba(44, 62, 80, 0.8);
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#myBtnContainer button:hover {
+    color: #fff;
+    background-color: #3498db;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.btn-c {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.btn-c i {
+    color: #3498db;
+}
+.btn-c:hover {
+    color: #3498db;
+    transform: rotate(90deg) scale(1.1);
+}
+.contact {
+    background-color: rgba(236, 240, 241, 0.9);
+    padding: 100px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+.contact-details i {
+    font-size: 1.8rem;
+    color: #3498db;
+}
+.contact-details p {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    color: rgba(44, 62, 80, 0.8);
+}
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #3498db;
+}
+.contact-form .form-control {
+    padding: 12px;
+    width: 80%;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+footer {
+    background-color: #2c3e50;
+    padding: 20px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+footer .link-group a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgba(108, 117, 125, 0.8);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+footer .link-group a:hover {
+    color: #3498db;
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.social-links button {
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px 15px;
+    border-radius: 0.5rem;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.social-links .dribble {
+    color: #2f00ff;
+}
+.social-links button:hover {
+    color: #fff;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.social-links .dribble:hover {
+    background-color: #4253ea;
+}
+.social-links .whatsapp {
+    color: #ff00a2;
+}
+.social-links .whatsapp:hover {
+    background-color: #f25dea;
+}
+.social-links .behance {
+    color: #255afc;
+}
+.social-links .behance:hover {
+    background-color: #255afc;
+}
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    font-size: 1.6rem;
+    background-color: rgba(52, 152, 219, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#btn-back-to-top:hover {
+    background-color: rgba(41, 128, 185, 0.8);
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+#btn-back-to-top::before {
+    content: "↑";
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+}
+.ffo {
+    padding-left: 10vw;
+}
+.project-section {
+    padding: 60px 0;
+    background-color: rgba(236, 240, 241, 0.9);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease-in-out;
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.project-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.project-title:hover {
+    color: #3498db;
+}
+.project-description {
+    font-size: 1.2rem;
+    color: rgba(44, 62, 80, 0.8);
+    margin: 10px 0;
+}
+.project-image {
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
